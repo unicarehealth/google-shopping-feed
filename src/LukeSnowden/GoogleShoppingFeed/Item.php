@@ -282,6 +282,17 @@ class Item {
 	}
 
 	/**
+	 * [custom_label_0 - Set the custom_label_0 of the product]
+	 * @param  [type] $label [description]
+	 * @return [type]              [description]
+	 */
+	public function custom_label_0( $label ) {
+		$node = new Node('custom_label_0');
+		$label = $this->safeCharEncodeText( $label );
+		$this->nodes['custom_label_0'] = $node->value($label)->_namespace($this->namespace);
+	}
+
+	/**
 	 * [nodes description]
 	 * @return [type] [description]
 	 */
