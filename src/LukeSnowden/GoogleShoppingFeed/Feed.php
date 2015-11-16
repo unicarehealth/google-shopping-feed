@@ -210,6 +210,17 @@ class Feed {
 	}
 
 	/**
+	 * Return XML of the feed
+	 *
+	 * @return [type] [description]
+	 */
+	public function asXml()
+	{
+		$this->addItemsToFeed();
+		$data = html_entity_decode( $this->feed->asXml() );
+	}
+
+	/**
 	 * [asRss description]
 	 * @return [type] [description]
 	 */
