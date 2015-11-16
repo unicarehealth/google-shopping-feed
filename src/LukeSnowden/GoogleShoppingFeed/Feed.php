@@ -214,7 +214,7 @@ class Feed {
 	 * @return [type] [description]
 	 */
 	public function asRss( $output = false ) {
-		ob_end_clean();
+		@ob_end_clean();
 		$this->addItemsToFeed();
 		$data = html_entity_decode( $this->feed->asXml() );
 		if( $output ) {
