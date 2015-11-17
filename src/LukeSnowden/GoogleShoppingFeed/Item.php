@@ -293,6 +293,16 @@ class Item {
 	}
 
 	/**
+	 * [identifier_exists - Set the identifier_exists of the product]
+	 * @param  [type] $label [description]
+	 * @return [type]              [description]
+	 */
+	public function identifier_exists( $value ) {
+		$node = new Node('identifier_exists');
+		$this->nodes['identifier_exists'] = $node->value($value)->_namespace($this->namespace);
+	}
+
+	/**
 	 * [nodes description]
 	 * @return [type] [description]
 	 */
