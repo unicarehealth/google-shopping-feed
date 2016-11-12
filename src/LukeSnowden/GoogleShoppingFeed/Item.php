@@ -184,6 +184,16 @@ class Item {
 	}
 
 	/**
+	 * [gtin description]
+	 * @param  [type] $gtin [description]
+	 * @return [type]       [description]
+	 */
+	public function gtin( $gtin ) {
+		$node = new Node('gtin');
+		$this->nodes['gtin'] = $node->value($gtin)->_namespace($this->namespace)->addCdata();
+	}
+
+	/**
 	 * [product_type description]
 	 * @param  [type] $productType [description]
 	 * @return [type]              [description]
@@ -282,17 +292,6 @@ class Item {
 	}
 
 	/**
-	 * [custom_label_0 - Set the custom_label_0 of the product]
-	 * @param  [type] $label [description]
-	 * @return [type]              [description]
-	 */
-	public function custom_label_0( $label ) {
-		$node = new Node('custom_label_0');
-		$label = $this->safeCharEncodeText( $label );
-		$this->nodes['custom_label_0'] = $node->value($label)->_namespace($this->namespace);
-	}
-
-	/**
 	 * [identifier_exists - Set the identifier_exists of the product]
 	 * @param  [type] $label [description]
 	 * @return [type]              [description]
@@ -300,6 +299,56 @@ class Item {
 	public function identifier_exists( $value ) {
 		$node = new Node('identifier_exists');
 		$this->nodes['identifier_exists'] = $node->value($value)->_namespace($this->namespace);
+	}
+
+	/**
+	 * [custom_label description]
+	 * @param  [type] $customLabel [description]
+	 * @return [type]           [description]
+	 */
+	public function custom_label_0( $customLabel ) {
+		$node = new Node('custom_label_0');
+		$this->nodes['custom_label_0'] = $node->value($customLabel)->_namespace($this->namespace);
+	}
+
+	/**
+	 * [custom_label_1 description]
+	 * @param  [type] $customLabel [description]
+	 * @return [type]              [description]
+	 */
+	public function custom_label_1( $customLabel ) {
+		$node = new Node('custom_label_1');
+		$this->nodes['custom_label_1'] = $node->value($customLabel)->_namespace($this->namespace);
+	}
+
+	/**
+	 * [custom_label_2 description]
+	 * @param  [type] $customLabel [description]
+	 * @return [type]              [description]
+	 */
+	public function custom_label_2( $customLabel ) {
+		$node = new Node('custom_label_2');
+		$this->nodes['custom_label_2'] = $node->value($customLabel)->_namespace($this->namespace);
+	}
+
+	/**
+	 * [custom_label_3 description]
+	 * @param  [type] $customLabel [description]
+	 * @return [type]              [description]
+	 */
+	public function custom_label_3( $customLabel ) {
+		$node = new Node('custom_label_3');
+		$this->nodes['custom_label_3'] = $node->value($customLabel)->_namespace($this->namespace);
+	}
+
+	/**
+	 * [custom_label_4 description]
+	 * @param  [type] $customLabel [description]
+	 * @return [type]              [description]
+	 */
+	public function custom_label_4( $customLabel ) {
+		$node = new Node('custom_label_4');
+		$this->nodes['custom_label_4'] = $node->value($customLabel)->_namespace($this->namespace);
 	}
 
 	/**

@@ -1,6 +1,3 @@
-#Google Shopping Feed API
-
-please note this this is still in development
 
 ###composer
 
@@ -34,10 +31,18 @@ foreach( $products as $product ) {
 	...
 	...
 
-	// create a variant
+	/** create a variant */
 	$variant = $item->variant();
 	$variant->size($variant::LARGE);
 	$variant->color('Red');
+
+	/**
+	 * One thing to note, if creating variants, delete the initial object after you've done,
+	 * Google no longer needs it!
+	 *
+	 * $item->delete();
+	 *
+	 */
 
 }
 
