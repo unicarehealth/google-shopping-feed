@@ -392,16 +392,6 @@ class Item {
 	}
 
 	/**
-	 * [item_group_id description]
-	 * @param  [type] $id [description]
-	 * @return [type]     [description]
-	 */
-	public function item_group_id( $id ) {
-		$node = new Node('item_group_id');
-		$this->nodes['item_group_id'] = $node->value($id)->_namespace($this->namespace);
-	}
-
-	/**
 	 * [nodes description]
 	 * @return [type] [description]
 	 */
