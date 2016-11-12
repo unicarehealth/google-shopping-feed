@@ -262,6 +262,26 @@ class Item {
 	}
 
 	/**
+	 * [size description]
+	 * @param  [type] $size_type [description]
+	 * @return [type]            [description]
+	 */
+	public function size_type( $size_type ) {
+		$node = new Node('size_type');
+		$this->nodes['size_type'] = $node->value($size_type)->_namespace($this->namespace);
+	}
+
+	/**
+	 * [size_system description]
+	 * @param  [type] $size_system [description]
+	 * @return [type]              [description]
+	 */
+	public function size_system( $size_system ) {
+		$node = new Node('size_system');
+		$this->nodes['size_system'] = $node->value($size_system)->_namespace($this->namespace);
+	}
+
+	/**
 	 * [gender description]
 	 * @param  [type] $gender [description]
 	 * @return [type]         [description]
@@ -292,11 +312,30 @@ class Item {
 	}
 
 	/**
+	 * [material description]
+	 * @param  [type] $material [description]
+	 * @return [type]           [description]
+	 */
+	public function material( $material ) {
+		$node = new Node('material');
+		$this->nodes['material'] = $node->value($material)->_namespace($this->namespace);
+	}
+
+	/**
+	 * [pattern description]
+	 * @param  [type] $pattern [description]
+	 * @return [type]          [description]
+	 */
+	public function pattern( $pattern ) {
+		$node = new Node('pattern');
+		$this->nodes['pattern'] = $node->value($pattern)->_namespace($this->namespace);
+	}
+
+	/**
 	 * [item_group_id description]
 	 * @param  [type] $id [description]
 	 * @return [type]     [description]
 	 */
-
 	public function item_group_id( $id ) {
 		$node = new Node('item_group_id');
 		$this->nodes['item_group_id'] = $node->value($id)->_namespace($this->namespace);
@@ -350,6 +389,16 @@ class Item {
 	public function custom_label_4( $customLabel ) {
 		$node = new Node('custom_label_4');
 		$this->nodes['custom_label_4'] = $node->value($customLabel)->_namespace($this->namespace);
+	}
+
+	/**
+	 * [item_group_id description]
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	public function item_group_id( $id ) {
+		$node = new Node('item_group_id');
+		$this->nodes['item_group_id'] = $node->value($id)->_namespace($this->namespace);
 	}
 
 	/**
