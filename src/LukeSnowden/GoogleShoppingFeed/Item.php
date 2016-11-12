@@ -163,6 +163,17 @@ class Item {
 	}
 
 	/**
+	* [image_link description]
+	* @param  [type] $additional_image_link [description]
+	* @return [type]                        [description]
+	*/
+	public function additional_image_link( $additional_image_link ) {
+		$node = new Node('additional_image_link');
+		$additional_image_link = $this->safeCharEncodeURL($additional_image_link);
+		$this->nodes['additional_image_link'] = $node->value($additional_image_link)->_namespace($this->namespace)->addCdata();
+	}
+	
+	/**
 	 * [brand description]
 	 * @param  [type] $brand [description]
 	 * @return [type]        [description]
